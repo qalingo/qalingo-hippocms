@@ -1,0 +1,33 @@
+/*
+ * Copyright 2012-2013 Hippo B.V. (http://www.onehippo.com)
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.cm-s-cobalt { background: #002240; color: white; }
+.cm-s-cobalt div.CodeMirror-selected { background: #b36539 !important; }
+.cm-s-cobalt .CodeMirror-gutter { background: #002240; border-right: 1px solid #aaa; }
+.cm-s-cobalt .CodeMirror-gutter-text { color: #d0d0d0; }
+.cm-s-cobalt .CodeMirror-cursor { border-left: 1px solid white !important; }
+
+.cm-s-cobalt span.cm-comment { color: #08f; }
+.cm-s-cobalt span.cm-atom { color: #845dc4; }
+.cm-s-cobalt span.cm-number, .cm-s-cobalt span.cm-attribute { color: #ff80e1; }
+.cm-s-cobalt span.cm-keyword { color: #ffee80; }
+.cm-s-cobalt span.cm-string { color: #3ad900; }
+.cm-s-cobalt span.cm-meta { color: #ff9d00; }
+.cm-s-cobalt span.cm-variable-2, .cm-s-cobalt span.cm-tag { color: #9effff; }
+.cm-s-cobalt span.cm-variable-3, .cm-s-cobalt span.cm-def { color: white; }
+.cm-s-cobalt span.cm-error { color: #9d1e15; }
+.cm-s-cobalt span.cm-bracket { color: #d8d8d8; }
+.cm-s-cobalt span.cm-builtin, .cm-s-cobalt span.cm-special { color: #ff9e59; }
+.cm-s-cobalt span.cm-link { color: #845dc4; }

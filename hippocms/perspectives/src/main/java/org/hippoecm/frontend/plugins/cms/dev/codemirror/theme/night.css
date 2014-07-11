@@ -1,0 +1,36 @@
+/*
+ * Copyright 2012-2013 Hippo B.V. (http://www.onehippo.com)
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Loosely based on the Midnight Textmate theme */
+
+.cm-s-night { background: #0a001f; color: #f8f8f8; }
+.cm-s-night div.CodeMirror-selected { background: #a8f !important; }
+.cm-s-night .CodeMirror-gutter { background: #0a001f; border-right: 1px solid #aaa; }
+.cm-s-night .CodeMirror-gutter-text { color: #f8f8f8; }
+.cm-s-night .CodeMirror-cursor { border-left: 1px solid white !important; }
+
+.cm-s-night span.cm-comment { color: #6900a1; }
+.cm-s-night span.cm-atom { color: #845dc4; }
+.cm-s-night span.cm-number, .cm-s-night span.cm-attribute { color: #ffd500; }
+.cm-s-night span.cm-keyword { color: #599eff; }
+.cm-s-night span.cm-string { color: #37f14a; }
+.cm-s-night span.cm-meta { color: #7678e2; }
+.cm-s-night span.cm-variable-2, .cm-s-night span.cm-tag { color: #99b2ff; }
+.cm-s-night span.cm-variable-3, .cm-s-night span.cm-def { color: white; }
+.cm-s-night span.cm-error { color: #9d1e15; }
+.cm-s-night span.cm-bracket { color: #8da6ce; }
+.cm-s-night span.cm-comment { color: #6900a1; }
+.cm-s-night span.cm-builtin, .cm-s-night span.cm-special { color: #ff9e59; }
+.cm-s-night span.cm-link { color: #845dc4; }
