@@ -1,0 +1,232 @@
+
+========================================================================================================================
+Additional notice information is applicable for the following sub components:
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/apache-mime4j-0.6.jar
+
+    Apache JAMES Mime4j
+    Copyright 2004-2009 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-beanutils-1.8.0.jar
+
+    Apache Commons BeanUtils
+    Copyright 2000-2008 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-codec-1.5.jar
+
+    Apache Commons Codec
+    Copyright 2002-2011 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-collections-3.2.1.jar
+
+    Apache Commons Collections
+    Copyright 2001-2008 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-compress-1.4.1.jar
+
+    Apache Commons Compress
+    Copyright 2002-2012 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-configuration-1.7.jar
+
+    Apache Commons Configuration
+    Copyright 2001-2011 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-digester-1.8.1.jar
+
+    Apache Commons Digester
+    Copyright 2001-2008 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-fileupload-1.2.2.jar
+
+    Apache Commons FileUpload
+    Copyright 2002-2010 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-io-1.4.jar
+
+    Apache Commons IO
+    Copyright 2001-2008 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-lang-2.6.jar
+
+    Apache Commons Lang
+    Copyright 2001-2011 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-pool-1.5.4.jar
+
+    Apache Commons Pool
+    Copyright 1999-2009 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-proxy-1.0.jar
+
+    Apache Commons Proxy
+    Copyright 2005-2008 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/cxf-*2.6.13.jar
+
+    Apache CXF
+    Copyright 2006-2014 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/fontbox-1.7.1.jar
+
+    Apache FontBox
+    Copyright 2008-2012 The Apache Software Foundation
+
+    Based on source code contributed to the original FontBox project.
+    Copyright (c) 2006-2007, www.fontbox.org
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/geronimo-annotation_1.1_spec-1.0.1.jar
+
+    Annotation 1.1
+    Copyright 2003-2010 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/geronimo-stax-api_1.2_spec-1.1.jar
+
+    Apache Geronimo STAX Spec 1.2
+    Copyright 2003-2011 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippo-cms7-utilities-1.03.00.jar
+
+    Hippo CMS7 Utilities
+    Copyright 2012-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippogogreen-*-3.09.00.jar
+
+    Hippo Go Green
+    Copyright 2010-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippo-repository-*-2.26.00.jar
+
+    Hippo Repository
+    Copyright 2007-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hst-*-2.28.00.jar
+
+    Hippo Site Toolkit
+    Copyright 2008-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/jackrabbit-*-2.6.5*.jar
+
+    Jackrabbit <Module>
+    Copyright 2004-2013 The Apache Software Foundation
+
+    Based on source code originally developed by
+    Day Software (http://www.day.com/).
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/jackson-*-1.9.13.jar
+
+    This product currently only contains code developed by authors
+    of specific components, as identified by the source code files;
+    if such notes are missing files have been created by
+    Tatu Saloranta.
+
+    For additional credits (generally to people who reported problems)
+    see CREDITS file.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/jempbox-1.7.1.jar
+
+    Apache JempBox
+    Copyright 2008-2012 The Apache Software Foundation
+
+    Based on source code contributed to the original JempBox project.
+    Copyright (c) 2006-2007, www.jempbox.org
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/pdfbox-1.7.1.jar
+
+    Apache PDFBox
+    Copyright 2002-2012 The Apache Software Foundation
+
+    Based on source code contributed to the original PDFBox project.
+    Copyright (c) 2002-2007, www.pdfbox.org
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/poll-hst-client-1.08.00.jar
+
+    Hippo Forge Poll Addon
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/sitemap-component-1.06.00.jar
+
+    Hippo Forge HST-2 Sitemap Component
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/spring-*-3.2.8.RELEASE
+
+    Spring Framework 3.2.8.RELEASE
+    Copyright (c) 2002-2014 Pivotal, Inc.
+
+    This product is licensed to you under the Apache License, Version 2.0
+    (the "License"). You may not use this product except in compliance with
+    the License.
+
+    This product may include a number of subcomponents with separate
+    copyright notices and license terms. Your use of the source code for
+    these subcomponents is subject to the terms and conditions of the
+    subcomponent's license, as noted in the license.txt file.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/taxonomy-*-1.11.00.jar
+
+    Hippo Forge Taxonomy Addon
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/tcmp-addon-*-1.09.00.jar
+
+    Hippo Forge Tag-Cloud Management Addon
+    Copyright 2010-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/woodstox-core-asl-4.2.0.jar
+
+    This product currently only contains code developed by authors
+    of specific components, as identified by the source code files.
+
+    Since product implements StAX API, it has dependencies to StAX API
+    classes.
+
+    For additional credits (generally to people who reported problems)
+    see CREDITS file.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/xmlschema-core-2.0.3.jar
+
+    Apache WebServices - XmlSchema
+    Copyright 2004-2012 The Apache Software Foundation
+
+    Portions Copyright 2006 International Business Machines Corp.
+
+    Portions Copyright (C) World Wide Web Consortium 2006, 2007 and licensed under the
+    three-part BSD license.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/yui-2.xx-sources-1.01.11.jar
+
+    YUI 2.xx sources/dependencies resolver
+    Copyright 2008-2013 Hippo B.V. (http://www.onehippo.com)

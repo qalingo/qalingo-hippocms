@@ -1,0 +1,642 @@
+
+========================================================================================================================
+Additional notice information is applicable for the following sub components:
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/apache-mime4j-core-0.7.2.jar
+
+    Apache JAMES Mime4j (Core)
+    Copyright 2004-2012 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/apache-mime4j-dom-0.7.2.jar
+
+    Apache JAMES Mime4j (DOM)
+    Copyright 2004-2012 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-codec-1.5.jar
+
+    Apache Commons Codec
+    Copyright 2002-2011 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-collections-3.2.1.jar
+
+    Apache Commons Collections
+    Copyright 2001-2008 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-compress-1.4.1.jar
+
+    Apache Commons Compress
+    Copyright 2002-2012 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-dbcp-1.3.jar
+
+    Apache Commons DBCP
+    Copyright 2001-2010 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-httpclient-3.1.jar
+
+    Apache Jakarta HttpClient
+    Copyright 1999-2007 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-io-2.4.jar
+
+    Apache Commons IO
+    Copyright 2002-2012 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-lang-2.6.jar
+
+    Apache Commons Lang
+    Copyright 2001-2011 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-pool-1.5.4.jar
+
+    Apache Commons Pool
+    Copyright 1999-2009 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/commons-scxml2-2.0-M0.jar
+
+    Apache Commons SCXML
+    Copyright 2005-2014 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/cxf-*2.6.13.jar
+
+    Apache CXF
+    Copyright 2006-2014 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/dashboard-document-wizard-1.05.00.jar
+
+    Hippo Forge Dashboard Shortcut New Document Wizard Addon
+    Copyright 2010-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/fontbox-1.7.1.jar
+
+    Apache FontBox
+    Copyright 2008-2012 The Apache Software Foundation
+
+    Based on source code contributed to the original FontBox project.
+    Copyright (c) 2006-2007, www.fontbox.org
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/gallerypicker-1.13.00.jar
+
+    Hippo Forge GalleryImagePreview Editor Addon
+    Copyright 2008-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/geronimo-stax-api_1.0_spec-1.0.1.jar
+
+    Apache Geronimo
+    Copyright 2003-2006 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/groovy-all-2.2.2.jar
+
+    This module embeds (jarjar bundled):
+
+    Apache Commons CLI
+    Copyright 2001-2009 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippo-addon-channel-manager-*-2.26.00.jar
+
+    Hippo Addon Channel Manager
+    Copyright 2011-2014 Hippo B.V (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippo-addon-hst-configuration-editor-*-1.13.00.jar
+
+    Hippo Addon HST Configuration Editor
+    Copyright 2009-2014 Hippo B.V (http://www.onehippo.com)
+
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippo-cms7-utilities-1.03.00.jar
+
+    Hippo CMS7 Utilities
+    Copyright 2012-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippo-cms-*-2.26.00.jar
+
+    Hippo CMS
+    Copyright 2007-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hippo-repository-*-2.26.00.jar
+
+    Hippo Repository
+    Copyright 2007-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/hst-*-2.28.00.jar
+
+    Hippo Site Toolkit
+    Copyright 2008-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/htmlcleaner-1.02.09.jar
+
+    HTMLcleaner
+    Copyright 2008-2013 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/htmldiff-1.01.03.jar
+
+    HtmlDiff
+    Copyright 2010-2013 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/httplient-4.2.2.jar
+
+    Apache HttpComponents HttpClient
+    Copyright 1999-2012 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/httpcore-4.2.2.jar
+
+    Apache HttpComponents HttpCore
+    Copyright 2005-2012 The Apache Software Foundation
+
+    This project contains annotations derived from JCIP-ANNOTATIONS
+    Copyright (c) 2005 Brian Goetz and Tim Peierls. See http://www.jcip.net
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/isoparser-1.0-RC-1.jar
+
+    This product includes software developed by
+    CoreMedia AG (http://www.coremedia.com/).
+
+    This product includes software developed by
+    castLabs GmbH (http://www.castlabs.com/).
+
+    This product includes software developed by
+    Sebastian Annies (Sebastian.Annies@gmail.com)
+
+    This product includes software (Base64 Encoder extracted from commons-codec) developed by
+    The Apache Software Foundation (http://www.apache.org/).
+
+    This product includes software (Hex Encoder extracted from commons-codec) developed by
+    The Apache Software Foundation (http://www.apache.org/).
+
+    This product includes software (package com.googlecode.mp4parser.h264) developed by
+    Stanislav Vitvitskiy and originally licensed under MIT license (http://www.opensource.org/licenses/mit-license.php)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/jackrabbit-*-2.6.5*.jar
+
+    Jackrabbit <Module>
+    Copyright 2004-2013 The Apache Software Foundation
+
+    Based on source code originally developed by
+    Day Software (http://www.day.com/).
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/jackson-*-1.9.13.jar
+
+    This product currently only contains code developed by authors
+    of specific components, as identified by the source code files;
+    if such notes are missing files have been created by
+    Tatu Saloranta.
+
+    For additional credits (generally to people who reported problems)
+    see CREDITS file.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/jcrdiff-*-1.01.03.jar
+
+    JCR Diff
+    Copyright 2011-2013 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/jempbox-1.7.1.jar
+
+    Apache JempBox
+    Copyright 2008-2012 The Apache Software Foundation
+
+    Based on source code contributed to the original JempBox project.
+    Copyright (c) 2006-2007, www.jempbox.org
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/joda-time-2.0.jar
+
+    This product includes software developed by
+    Joda.org (http://www.joda.org/).
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/lucene-core-3.6.0.jar
+
+    Apache Lucene
+    Copyright 2012 The Apache Software Foundation
+
+    The snowball stemmers in
+      contrib/analyzers/common/src/java/net/sf/snowball
+    were developed by Martin Porter and Richard Boulton.
+    The snowball stopword lists in
+      contrib/analyzers/common/src/resources/org/apache/lucene/analysis/snowball
+    were developed by Martin Porter and Richard Boulton.
+    The full snowball package is available from
+      http://snowball.tartarus.org/
+
+    The KStem stemmer in
+      common/src/org/apache/lucene/analysis/en
+    was developed by Bob Krovetz and Sergio Guzman-Lara (CIIR-UMass Amherst)
+    under the BSD-license.
+
+    The Arabic,Persian,Romanian,Bulgarian, and Hindi analyzers (contrib/analyzers) come with a default
+    stopword list that is BSD-licensed created by Jacques Savoy.  These files reside in:
+    contrib/analyzers/common/src/resources/org/apache/lucene/analysis/ar/stopwords.txt,
+    contrib/analyzers/common/src/resources/org/apache/lucene/analysis/fa/stopwords.txt,
+    contrib/analyzers/common/src/resources/org/apache/lucene/analysis/ro/stopwords.txt,
+    contrib/analyzers/common/src/resources/org/apache/lucene/analysis/bg/stopwords.txt,
+    contrib/analyzers/common/src/resources/org/apache/lucene/analysis/hi/stopwords.txt
+    See http://members.unine.ch/jacques.savoy/clef/index.html.
+
+    The German,Spanish,Finnish,French,Hungarian,Italian,Portuguese,Russian and Swedish light stemmers
+    (common) are based on BSD-licensed reference implementations created by Jacques Savoy and
+    Ljiljana Dolamic. These files reside in:
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/de/GermanLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/de/GermanMinimalStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/es/SpanishLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/fi/FinnishLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/fr/FrenchLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/fr/FrenchMinimalStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/hu/HungarianLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/it/ItalianLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/pt/PortugueseLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/ru/RussianLightStemmer.java
+    contrib/analyzers/common/src/java/org/apache/lucene/analysis/sv/SwedishLightStemmer.java
+
+    The Stempel analyzer (contrib/analyzers) includes BSD-licensed software developed
+    by the Egothor project http://egothor.sf.net/, created by Leo Galambos, Martin Kvapil,
+    and Edmond Nolan.
+
+    The Polish analyzer (contrib/analyzers) comes with a default
+    stopword list that is BSD-licensed created by the Carrot2 project. The file resides
+    in contrib/analyzers/stempel/src/resources/org/apache/lucene/analysis/pl/stopwords.txt.
+    See http://project.carrot2.org/license.html.
+
+    Includes software from other Apache Software Foundation projects,
+    including, but not limited to:
+     - Apache Ant
+     - Apache Jakarta Regexp
+     - Commons Compress
+     - Xerces
+
+    The SmartChineseAnalyzer source code (under contrib/analyzers) was
+    provided by Xiaoping Gao and copyright 2009 by www.imdict.net.
+
+    ICU4J, (under contrib/icu) is licensed under an MIT styles license
+    (contrib/icu/lib/ICU-LICENSE.txt) and Copyright (c) 1995-2008
+    International Business Machines Corporation and others
+
+    Some files (contrib/analyzers/common/src/test/.../WordBreakTestUnicode_*.java
+    and data files under contrib/icu/src/data/) are derived from Unicode data such
+    as the Unicode Character Database. See http://unicode.org/copyright.html for more
+    details.
+
+    The class org.apache.lucene.SorterTemplate was inspired by CGLIB's class with
+    the same name. The implementation part is mainly done using pre-existing
+    Lucene sorting code. In-place stable mergesort was borrowed from CGLIB,
+    which is Apache-licensed.
+
+    The class org.apache.lucene.util.WeakIdentityMap was derived from
+    the Apache CXF project and is Apache License 2.0.
+
+    The Google Code Prettify is Apache License 2.0.
+    See http://code.google.com/p/google-code-prettify/
+
+    JUnit (junit-4.10) is licensed under the Common Public License v. 1.0
+    See http://junit.sourceforge.net/cpl-v10.html
+
+    This product includes code (JaspellTernarySearchTrie) from Java Spelling Checking Package (jaspell): http://jaspell.sourceforge.net/
+    License: The BSD License (http://www.opensource.org/licenses/bsd-license.php)
+
+    ===========================================================================
+    Kuromoji Japanese Morphological Analyzer - Apache Lucene Integration
+    ===========================================================================
+
+    This software includes a binary and/or source version of data from
+
+      mecab-ipadic-2.7.0-20070801
+
+    which can be obtained from
+
+      http://atilika.com/releases/mecab-ipadic/mecab-ipadic-2.7.0-20070801.tar.gz
+
+    or
+
+      http://jaist.dl.sourceforge.net/project/mecab/mecab-ipadic/2.7.0-20070801/mecab-ipadic-2.7.0-20070801.tar.gz
+
+    ===========================================================================
+    mecab-ipadic-2.7.0-20070801 Notice
+    ===========================================================================
+
+    Nara Institute of Science and Technology (NAIST),
+    the copyright holders, disclaims all warranties with regard to this
+    software, including all implied warranties of merchantability and
+    fitness, in no event shall NAIST be liable for
+    any special, indirect or consequential damages or any damages
+    whatsoever resulting from loss of use, data or profits, whether in an
+    action of contract, negligence or other tortuous action, arising out
+    of or in connection with the use or performance of this software.
+
+    A large portion of the dictionary entries
+    originate from ICOT Free Software.  The following conditions for ICOT
+    Free Software applies to the current dictionary as well.
+
+    Each User may also freely distribute the Program, whether in its
+    original form or modified, to any third party or parties, PROVIDED
+    that the provisions of Section 3 ("NO WARRANTY") will ALWAYS appear
+    on, or be attached to, the Program, which is distributed substantially
+    in the same form as set out herein and that such intended
+    distribution, if actually made, will neither violate or otherwise
+    contravene any of the laws and regulations of the countries having
+    jurisdiction over the User or the intended distribution itself.
+
+    NO WARRANTY
+
+    The program was produced on an experimental basis in the course of the
+    research and development conducted during the project and is provided
+    to users as so produced on an experimental basis.  Accordingly, the
+    program is provided without any warranty whatsoever, whether express,
+    implied, statutory or otherwise.  The term "warranty" used herein
+    includes, but is not limited to, any warranty of the quality,
+    performance, merchantability and fitness for a particular purpose of
+    the program and the nonexistence of any infringement or violation of
+    any right of any third party.
+
+    Each user of the program will agree and understand, and be deemed to
+    have agreed and understood, that there is no warranty whatsoever for
+    the program and, accordingly, the entire risk arising from or
+    otherwise connected with the program is assumed by the user.
+
+    Therefore, neither ICOT, the copyright holder, or any other
+    organization that participated in or was otherwise related to the
+    development of the program and their respective officials, directors,
+    officers and other employees shall be held liable for any and all
+    damages, including, without limitation, general, special, incidental
+    and consequential damages, arising out of or otherwise in connection
+    with the use or inability to use the program or any product, material
+    or result produced or otherwise obtained by using the program,
+    regardless of whether they have been advised of, or otherwise had
+    knowledge of, the possibility of such damages at any time during the
+    project or thereafter.  Each user will be deemed to have agreed to the
+    foregoing by his or her commencement of use of the program.  The term
+    "use" as used herein includes, but is not limited to, the use,
+    modification, copying and distribution of the program and the
+    production of secondary products from the program.
+
+    In the case where the program, whether in its original form or
+    modified, was distributed or delivered to or received by a user from
+    any person, organization or entity other than ICOT, unless it makes or
+    grants independently of ICOT any specific warranty to the user in
+    writing, such person, organization or entity, will also be exempted
+    from and not be held liable to the user for any such damages as noted
+    above as far as the program is concerned.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/lucene-spellchecker-2.2.0.jar
+
+    Apache Lucene
+    Copyright 2006 The Apache Software Foundation
+
+    The snowball stemmers in
+      contrib/snowball/src/java/net/sf/snowball
+    were developed by Martin Porter and Richard Boulton.
+    The full snowball package is available from
+      http://snowball.tartarus.org/
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/pdfbox-1.7.1.jar
+
+    Apache PDFBox
+    Copyright 2002-2012 The Apache Software Foundation
+
+    Based on source code contributed to the original PDFBox project.
+    Copyright (c) 2002-2007, www.pdfbox.org
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/poi-*-3.8.jar
+
+    Apache POI
+    Copyright 2009 The Apache Software Foundation
+
+    This product contains the DOM4J library (http://www.dom4j.org).
+    Copyright 2001-2005 (C) MetaStuff, Ltd. All Rights Reserved.
+
+    This product contains parts that were originally based on software from BEA.
+    Copyright (c) 2000-2003, BEA Systems, <http://www.bea.com/>.
+
+    This product contains W3C XML Schema documents. Copyright 2001-2003 (c)
+    World Wide Web Consortium (Massachusetts Institute of Technology, European
+    Research Consortium for Informatics and Mathematics, Keio University)
+
+    This product contains the Piccolo XML Parser for Java
+    (http://piccolo.sourceforge.net/). Copyright 2002 Yuval Oren.
+
+    This product contains the chunks_parse_cmds.tbl file from the vsdump program.
+    Copyright (C) 2006-2007 Valek Filippov (frob@df.ru)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/poll-addon-*-1.08.00.jar
+
+    Hippo Forge Poll Addon
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/relateddocs-2.10.00.jar
+
+    Hippo Forge Related Documents Addon
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/sanselan-0.97-incubator.jar
+
+    Apache Sanselan
+    Copyright 2007-2009 The Apache Software Foundation.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/selectionplugins-addon-*-2.08.00.jar
+
+    Hippo Forge Selection Plugins
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/sitemap-*-1.06.00.jar
+
+    Hippo Forge HST-2 Sitemap Component
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/taxonomy-*-1.11.00.jar
+
+    Hippo Forge Taxonomy Addon
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/tcmp-addon-*-1.09.00.jar
+
+    Hippo Forge Tag-Cloud Management Addon
+    Copyright 2010-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/tika-core-1.3.jar
+
+    Apache Tika core
+    Copyright 2007-2013 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/tika-parsers-1.3.jar
+
+    Apache Tika parsers
+    Copyright 2007-2013 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/wicket-core-6.14.0.jar
+
+      Apache Wicket
+      Copyright 2006-2011 Apache Software Foundation
+
+      This product includes software developed at
+      The Apache Software Foundation (http://www.apache.org/).
+
+      This product includes software from QOS.ch (http://slf4j.org) licensed under the X11 license
+      Copyright (c) 2004-2008 QOS.ch
+
+      Contains Diff library from Mavens JRCS, released under
+      The Apache Software License, Version 1.1.
+      (c) 1999-2003
+
+      org.apache.wicket.markup.html.form.upload.MultiFileUploadField.js is taken from [1]
+      and has the following notice:
+         "Licence:
+          Use this however/wherever you like, just don't blame me if it breaks
+          anything.
+
+          Credit:
+          If you're nice, you'll leave this bit:
+
+          Class by Stickman -- http://www.the-stickman.com
+          with thanks to:
+          [for Safari fixes]
+             Luis Torrefranca -- http://www.law.pitt.edu
+             and
+             Shawn Parker & John Pennypacker -- http://www.fuzzycoconut.com
+          [for duplicate name bug]
+             'neal'"
+      [1]: http://the-stickman.com/web-development/javascript/upload-multiple-files-with-a-single-file-element/
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/wicket-datetime-6.14.0.jar
+
+      Apache Wicket Date Time
+      Copyright 2006-2011 Apache Software Foundation
+
+      This product includes software developed at
+      The Apache Software Foundation (http://www.apache.org/).
+
+      Contains code of the Yahoo User Interface library (version: 2.8.2r1),
+      released under the BSD License:
+      http://developer.yahoo.net/yui/license.txt
+      Copyright (c) 2010, Yahoo! Inc.
+
+      This product includes software developed by
+      Joda.org (http://www.joda.org/).
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/wicket-extensions-6.14.0.jar
+
+    Apache Wicket Extensions
+    Copyright 2006-2014 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/wicket-request-6.14.0.jar
+
+    Apache Wicket Request
+    Copyright 2006-2014 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/wicket-util-6.14.0.jar
+
+    Apache Wicket Util
+    Copyright 2006-2014 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/woodstox-core-asl-4.2.0.jar
+
+    This product currently only contains code developed by authors
+    of specific components, as identified by the source code files.
+
+    Since product implements StAX API, it has dependencies to StAX API
+    classes.
+
+    For additional credits (generally to people who reported problems)
+    see CREDITS file.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/xercesImpl-2.9.1.jar
+
+    Apache Xerces Java
+    Copyright 1999-2007 The Apache Software Foundation
+
+    Portions of this software were originally based on the following:
+      - software copyright (c) 1999, IBM Corporation., http://www.ibm.com.
+      - software copyright (c) 1999, Sun Microsystems., http://www.sun.com.
+      - voluntary contributions made by Paul Eng on behalf of the
+        Apache Software Foundation that were originally developed at iClick, Inc.,
+        software copyright (c) 1999.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/xmlbeans-java6-2.3.0.jar
+
+    Portions of this software were originally based on the following:
+      - software copyright (c) 2000-2003, BEA Systems, <http://www.bea.com/>.
+
+    Aside from contributions to the Apache XMLBeans project, this
+    software also includes:
+
+     - one or more source files from the Apache Xerces-J and Apache Axis
+       products, Copyright (c) 1999-2003 Apache Software Foundation
+
+     - W3C XML Schema documents Copyright 2001-2003 (c) World Wide Web
+       Consortium (Massachusetts Institute of Technology, European Research
+       Consortium for Informatics and Mathematics, Keio University)
+
+     - resolver.jar from Apache Xml Commons project,
+       Copyright (c) 2001-2003 Apache Software Foundation
+
+     - Piccolo XML Parser for Java from http://piccolo.sourceforge.net/,
+       Copyright 2002 Yuval Oren under the terms of the Apache Software License 2.0
+
+     - JSR-173 Streaming API for XML from http://sourceforge.net/projects/xmlpullparser/,
+       Copyright 2005 BEA under the terms of the Apache Software License 2.0
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/xmlschema-core-2.0.3.jar
+
+    Apache WebServices - XmlSchema
+    Copyright 2004-2012 The Apache Software Foundation
+
+    Portions Copyright 2006 International Business Machines Corp.
+
+    Portions Copyright (C) World Wide Web Consortium 2006, 2007 and licensed under the
+    three-part BSD license.
+
+------------------------------------------------------------------------------------------------------------------------
+WEB-INF/lib/yui-2.xx-sources-1.01.11.jar
+
+    YUI 2.xx sources/dependencies resolver
+    Copyright 2008-2013 Hippo B.V. (http://www.onehippo.com)

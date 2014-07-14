@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2013 Hippo B.V. (http://www.onehippo.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>hippo-qalingo</artifactId>
+    <groupId>org.hoteia.qalingo.hippocms</groupId>
+    <version>1.00-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <name>Hippo Qalingo Distribution</name>
+  <artifactId>hippo-qalingo-dist</artifactId>
+  <packaging>pom</packaging>
+
+  <profiles>
+    <profile>
+      <id>dist-full</id>
+      <properties>
+        <dist.tomcat.archive>${project.build.directory}/apache-tomcat-${cargo.tomcat.full.version}${cargo.tomcat.distribution.url.postfix}</dist.tomcat.archive>
+        <!-- just to make sure we're using the .tar.gz tomcat dist -->
+        <cargo.tomcat.distribution.url.postfix>.tar.gz</cargo.tomcat.distribution.url.postfix>
+        <dist.target.dir>${project.build.directory}/dist</dist.target.dir>
+        <tomcat.target.dir>${dist.target.dir}/tomcat</tomcat.target.dir>
+      </properties>
+      <build>
+        <defaultGoal>package</defaultGoal>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <inherited>false</inherited>
+            <executions>
+              <execution>
+                <id>get-unpacked-tomcat</id>
+                <phase>generate-sources</phase>
+                <configuration>
+                  <target>
+                    <mkdir dir="${project.build.directory}" />
+                    <delete dir="${dist.target.dir}" quiet="true" />
+                    <get src="${cargo.tomcat.distribution.url}" dest="${dist.tomcat.archive}" usetimestamp="true" />
+                    <untar src="${dist.tomcat.archive}" dest="${tomcat.target.dir}" overwrite="false" compression="gzip">
+                      <patternset>
+                        <exclude name="*/webapps/**" />
+                      </patternset>
+                      <cutdirsmapper dirs="1" />
+                    </untar>
+                    <unzip src="${project.basedir}/../cms/target/cms.war" dest="${tomcat.target.dir}/webapps/cms" />
+                    <unzip src="${project.basedir}/../site/target/site.war" dest="${tomcat.target.dir}/webapps/site" />
+                    <copy file="${tomcat.target.dir}/LICENSE" tofile="${dist.target.dir}/tomcat-LICENSE" />
+                    <copy file="${tomcat.target.dir}/NOTICE" tofile="${dist.target.dir}/tomcat-NOTICE" />
+                    <copy file="${tomcat.target.dir}/webapps/cms/META-INF/LICENSE" tofile="${dist.target.dir}/cms-LICENSE" />
+                    <copy file="${tomcat.target.dir}/webapps/cms/META-INF/NOTICE" tofile="${dist.target.dir}/cms-NOTICE" />
+                    <copy file="${tomcat.target.dir}/webapps/site/META-INF/LICENSE" tofile="${dist.target.dir}/site-LICENSE" />
+                    <copy file="${tomcat.target.dir}/webapps/site/META-INF/NOTICE" tofile="${dist.target.dir}/site-NOTICE" />
+                    <copy file="${project.basedir}/../conf/context.xml" tofile="${tomcat.target.dir}/conf/context.xml" overwrite="true" />
+                    <copy file="${project.basedir}/../conf/log4j-prod.xml" tofile="${tomcat.target.dir}/conf/log4j.xml" />
+                    <copy file="${project.basedir}/../conf/log4j.dtd" tofile="${tomcat.target.dir}/conf/log4j.dtd" />
+                    <copy todir="${dist.target.dir}" overwrite="true"><fileset dir="${project.basedir}/src/overlay" /></copy>
+                  </target>
+                </configuration>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>package-dist</id>
+                <phase>package</phase>
+                <configuration>
+                  <target>
+                    <tar destfile="${project.build.directory}/${project.build.finalName}.tar.gz" compression="gzip" longfile="gnu">
+                      <tarfileset dir="${dist.target.dir}">
+                        <exclude name="tomcat/bin/*.sh" />
+                        <exclude name="tomcat/logs/*.log" />
+                        <exclude name="tomcat/webapps/cargocpc.war" />
+                        <exclude name="tomcat/webapps/cargocpc/**" />
+                        <exclude name="tomcat/work/Catalina/**" />
+                      </tarfileset>
+                      <tarfileset dir="${dist.target.dir}" filemode="755">
+                        <include name="tomcat/bin/*.sh" />
+                      </tarfileset>
+                    </tar>
+                  </target>
+                </configuration>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>copy-common</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>copy</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>${tomcat.target.dir}/common/lib</outputDirectory>
+                  <artifactItems>
+                    <!-- common spec dependencies -->
+                    <artifactItem><groupId>javax.jcr</groupId><artifactId>jcr</artifactId></artifactItem>
+                    <artifactItem><groupId>javax.mail</groupId><artifactId>mail</artifactId></artifactItem>
+                    <artifactItem><groupId>org.apache.geronimo.specs</groupId><artifactId>geronimo-jta_1.1_spec</artifactId></artifactItem>
+                  </artifactItems>
+                </configuration>
+              </execution>
+              <execution>
+                <id>copy-shared</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>copy</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>${tomcat.target.dir}/shared/lib</outputDirectory>
+                  <artifactItems>
+                    <!-- shared logging dependencies -->
+                    <artifactItem><groupId>org.slf4j</groupId><artifactId>slf4j-api</artifactId></artifactItem>
+                    <artifactItem><groupId>org.slf4j</groupId><artifactId>jcl-over-slf4j</artifactId></artifactItem>
+                    <artifactItem><groupId>org.slf4j</groupId><artifactId>slf4j-log4j12</artifactId></artifactItem>
+                    <artifactItem><groupId>log4j</groupId><artifactId>log4j</artifactId></artifactItem>
+                    <!-- shared hippo dependencies -->
+                    <artifactItem><groupId>org.onehippo.cms7</groupId><artifactId>hippo-cms7-commons</artifactId></artifactItem>
+                    <artifactItem><groupId>org.onehippo.cms7</groupId><artifactId>hippo-services</artifactId></artifactItem>
+                    <artifactItem><groupId>org.onehippo.cms7</groupId><artifactId>hippo-repository-api</artifactId></artifactItem>
+                    <artifactItem><groupId>org.onehippo.cms7</groupId><artifactId>hippo-repository-builtin</artifactId></artifactItem>
+                  </artifactItems>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- start/stop tomcat once to get the initial repository content loaded -->
+          <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven2-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>cargo-start</id>
+                <phase>generate-resources</phase>
+                <goals>
+                  <goal>start</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>cargo-stop</id>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>stop</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <container>
+                <home>${tomcat.target.dir}</home>
+                <output>${project.build.directory}/tomcat.log</output>
+              </container>
+              <configuration>
+                <type>existing</type>
+                <home>${tomcat.target.dir}</home>
+              </configuration>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>demo-launcher</id>
+      <properties>
+        <demo.release.version>${hippo.release.version}</demo.release.version>
+      </properties>
+      <build>
+        <defaultGoal>package</defaultGoal>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <inherited>false</inherited>
+            <executions>
+              <execution>
+                <id>package-demo-launchers</id>
+                <phase>package</phase>
+                <configuration>
+                  <target>
+
+                    <echo message="[[[ Start Building Demo Launcher ]]]" />
+
+                    <echo message=" Copying Demo Application..." />
+                    <untar src="${project.build.directory}/${project.build.finalName}.tar.gz" dest="${project.build.directory}/HippoCMS-Launcher/" overwrite="true" compression="gzip" />
+
+                    <echo message=" Configuring Launcher..." />
+                    <echo file="${project.build.directory}/HippoCMS-Launcher/launcher.properties" append="false">
+                      version=${demo.release.version}
+                    </echo>
+
+                    <echo message=" Packaging Launcher..." />
+                    <tar destfile="${project.build.directory}/HippoCMS-GoGreen-${demo.release.version}.tar.gz" compression="gzip" longfile="gnu">
+                      <tarfileset dir="${project.build.directory}/HippoCMS-Launcher" prefix="HippoCMS-GoGreen-${demo.release.version}" />
+                    </tar>
+
+                    <zip destfile="${project.build.directory}/HippoCMS-GoGreen-${demo.release.version}.zip">
+                      <zipfileset dir="${project.build.directory}/HippoCMS-Launcher" prefix="HippoCMS-GoGreen-${demo.release.version}" />
+                    </zip>
+
+                    <echo message=" Cleaning..." />
+
+                    <!--
+                    <delete dir="${project.build.directory}/HippoCMS-Launcher" />
+                    -->
+
+                    <echo message="[[[ Finished Building Demo Launcher ]]]" />
+                  </target>
+                </configuration>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>get-demo-launchers</id>
+                <phase>prepare-package</phase>
+                <goals>
+                  <goal>copy</goal>
+                </goals>
+                <configuration>
+                  <artifactItems>
+                    <artifactItem>
+                      <groupId>org.hoteia.qalingo.hippocms</groupId>
+                      <artifactId>hippo-qalingo-launcher</artifactId>
+                      <classifier>jar-with-dependencies</classifier>
+                      <version>${project.version}</version>
+                      <type>jar</type>
+                      <outputDirectory>${project.build.directory}/HippoCMS-Launcher</outputDirectory>
+                      <overWrite>true</overWrite>
+                      <destFileName>hippocms.jar</destFileName>
+                    </artifactItem>
+                  </artifactItems>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

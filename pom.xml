@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2010-2014 Hippo B.V. (http://www.onehippo.com)
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.onehippo.cms7</groupId>
+    <artifactId>hippo-cms7-release</artifactId>
+    <version>7.9.1-iteration-80</version>
+  </parent>
+
+  <name>Hippo Qalingo</name>
+  <description>Hippo Qalingo Demo</description>
+  <groupId>org.hoteia.qalingo.hippocms</groupId>
+  <artifactId>hippo-qalingo</artifactId>
+  <version>1.00-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <inceptionYear>2010</inceptionYear>
+
+  <scm>
+    <connection>scm:svn:http://svn.onehippo.org/repos/hippo/hippo-demos/hippo-go-green/trunk</connection>
+    <developerConnection>scm:svn:https://svn.onehippo.org/repos/hippo/hippo-demos/hippo-go-green/trunk</developerConnection>
+    <url>http://svn.onehippo.org/viewvc/hippo-demos/hippo-go-green/trunk</url>
+  </scm>
+
+  <properties>
+    <!-- use root project name for all project modules NOTICE files, should be the same as in the root NOTICE file -->
+    <notice.project.name>Hippo Qalingo</notice.project.name>
+
+    <lib.commons.lang.version>2.6</lib.commons.lang.version>
+    <lib.commons.codec.version>1.5</lib.commons.codec.version>
+    <lib.freemarker.version>2.3.18</lib.freemarker.version>
+    <lib.javax-annotation-security>1.0.1</lib.javax-annotation-security>
+    <lib.javax-servlet-jstl.version>1.1.2</lib.javax-servlet-jstl.version>
+    <lib.json.version>20090211</lib.json.version>
+    <lib.rome.version>1.0.0</lib.rome.version>
+    <lib.taglibs.version>1.1.2</lib.taglibs.version>
+
+    <junit.version>4.8.2</junit.version>
+    <easymock.version>2.4</easymock.version>
+
+    <yui.sources.version>1.01.11</yui.sources.version>
+    <sonar.l10n.locales>nl,fr,it,de</sonar.l10n.locales>
+  </properties>
+
+  <repositories>
+   <repository>
+      <id>hippo</id>
+      <name>Hippo Maven 2</name>
+      <url>http://maven.onehippo.com/maven2/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+    </repository>
+  </repositories>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <!-- Libraries -->
+
+      <dependency>
+        <groupId>org.apache.geronimo.specs</groupId>
+        <artifactId>geronimo-annotation_1.1_spec</artifactId>
+        <version>${lib.javax-annotation-security}</version>
+        <!-- NOTE: You should use 'provided' instead of 'compile'
+           when your application container provides javax.annotation.security package. -->
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>${lib.json.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>net.java.dev.rome</groupId>
+        <artifactId>rome-fetcher</artifactId>
+        <version>${lib.rome.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>net.java.dev.rome</groupId>
+        <artifactId>rome</artifactId>
+        <version>${lib.rome.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>${spring.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.onehippo.yui</groupId>
+        <artifactId>yui-2.xx-sources</artifactId>
+        <version>${yui.sources.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-rt-rs-security-cors</artifactId>
+        <version>${cxf.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.easymock</groupId>
+        <artifactId>easymock</artifactId>
+        <version>${easymock.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>${lib.commons.codec.version}</version>
+      </dependency>
+      <!-- other predefined compile scope versioned dependencies -->
+      <dependency>
+        <groupId>org.freemarker</groupId>
+        <artifactId>freemarker</artifactId>
+        <version>${lib.freemarker.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${lib.commons.lang.version}</version>
+      </dependency>
+
+      <!-- other predefined runtime scope versioned dependencies -->
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>${lib.javax-servlet-jstl.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>taglibs</groupId>
+        <artifactId>standard</artifactId>
+        <version>${lib.taglibs.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <!-- other predefined test scope versioned dependencies -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+    </dependencies>
+
+  </dependencyManagement>
+
+  <build>
+    <defaultGoal>package</defaultGoal>
+    <pluginManagement>
+      <plugins>
+        <!-- redefine again default Hippo LICENSE and NOTICE file handling configuration like as defined
+             in root cms7-project pom but is 'nullified' again in parent cms7-release pom. -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <configuration>
+            <webResources>
+              <resource>
+                <directory>${project.build.directory}/classes</directory>
+                <includes>
+                  <include>META-INF/LICENSE</include>
+                  <include>META-INF/NOTICE</include>
+                  <include>META-INF/DEPENDENCIES</include>
+                </includes>
+                <filtering>false</filtering>
+              </resource>
+            </webResources>
+            <packagingExcludes>
+              WEB-INF/classes/META-INF/LICENSE,
+              WEB-INF/classes/META-INF/NOTICE,
+              WEB-INF/classes/META-INF/DEPENDENCIES
+            </packagingExcludes>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-remote-resources-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>process</goal>
+              </goals>
+              <configuration>
+                <resourceBundles>
+                  <resourceBundle>org.onehippo.cms7:hippo-cms7-legal-resources:1</resourceBundle>
+                </resourceBundles>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- end redefine again default Hippo LICENSE and NOTICE file handling configuration -->
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <profiles>
+
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+        <property>
+          <name>jrebel</name>
+        </property>
+      </activation>
+      <modules>
+        <module>content</module>
+        <module>cms</module>
+        <module>site</module>
+        <module>site-assembly</module>
+        <module>integration-tests</module>
+        <module>server-config</module>
+        <module>launcher</module>
+        <module>dist</module>
+      </modules>
+    </profile>
+
+    <profile>
+      <id>cargo.run</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven2-plugin</artifactId>
+            <configuration>
+              <configuration>
+                <properties>
+                  <catalina.servlet.uriencoding>UTF-8</catalina.servlet.uriencoding>
+                </properties>
+                <configfiles>
+                  <configfile>
+                    <file>${project.basedir}/conf/context.xml</file>
+                    <todir>conf/</todir>
+                    <tofile>context.xml</tofile>
+                  </configfile>
+                </configfiles>
+              </configuration>
+              <container>
+                <systemProperties>
+                  <!--
+                    set project.basedir property to enable automatic export
+                    <project.basedir>${project.basedir}</project.basedir>
+                  -->
+                  <log4j.configuration>file:${project.basedir}/conf/log4j-dev.xml</log4j.configuration>
+                </systemProperties>
+              </container>
+              <deployables>
+                <deployable>
+                  <type>war</type>
+                  <properties>
+                    <context>/cms</context>
+                  </properties>
+                  <location>${project.basedir}/cms/target/cms.war</location>
+                </deployable>
+                <deployable>
+                  <location>${project.basedir}/site/target/site.war</location>
+                  <type>war</type>
+                  <properties>
+                    <context>/site</context>
+                  </properties>
+                </deployable>
+              </deployables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>dist</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>jcl-over-slf4j</artifactId>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <scope>provided</scope>
+        </dependency>
+      </dependencies>
+      <build>
+        <defaultGoal>validate</defaultGoal>
+        <plugins>
+          <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <inherited>false</inherited>
+            <executions>
+              <execution>
+                <id>distro-assembly</id>
+                <phase>validate</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+                <configuration>
+                  <descriptors>
+                    <descriptor>${basedir}/src/main/assembly/distribution.xml</descriptor>
+                  </descriptors>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>pedantic</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.rat</groupId>
+            <artifactId>apache-rat-plugin</artifactId>
+            <inherited>false</inherited>
+            <configuration>
+              <excludes combine.children="append">
+                <!-- covered by 3rd-party licenses in the LICENSE file -->
+                <exclude>dist/src/overlay/tomcat/webapps/ROOT/css/reset-fonts-grids.css</exclude>
+                <exclude>dist/src/overlay/tomcat/webapps/ROOT/css/base-edited.css</exclude>
+                <exclude>site/src/main/resources/META-INF/hst/security/skin/js/jquery-1.4.2.min.js</exclude>
+                <exclude>site/src/main/webapp/css/facebook/yui-css.css</exclude>
+                <exclude>site/src/main/webapp/css/mobile/yui-css.css</exclude>
+                <exclude>site/src/main/webapp/css/yui-css.css</exclude>
+                <exclude>site/src/main/webapp/js/galleryview-2.1.1/**</exclude>
+                <exclude>site/src/main/webapp/js/json2.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery-1.4.2.min.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery-1.9.1.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery.mb.browser.min.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery.ui.core.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery.ui.datepicker.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery.localscroll-1.2.7-min.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery.scrollTo-1.4.2-min.js</exclude>
+                <exclude>site/src/main/webapp/js/jquery.serialScroll-1.2.2-min.js</exclude>
+                <exclude>site/src/main/webapp/js/mootools-1.2.4-core-nc.js</exclude>
+                <exclude>site/src/main/webapp/js/mootools-1.2.4-core.js</exclude>
+                <exclude>site/src/main/webapp/js/syntaxhighlighter_3.0.83/**</exclude>
+                <!-- too meta -->
+                <exclude>etc/dependencies/*</exclude>
+                <exclude>dist/src/overlay/tomcat/bin/*</exclude>
+                <!-- repository content XML -->
+                <exclude>content/src/main/resources/**/*.xml</exclude>
+                <exclude>server-config/acct-server-config/src/main/resources/**/*.xml</exclude>
+                <exclude>server-config/prod-server-config/src/main/resources/**/*.xml</exclude>
+                <exclude>server-config/test-server-config/src/main/resources/**/*.xml</exclude>
+                <exclude>launcher/src/main/java/com/centerkey/utils/BareBonesBrowserLaunch.java</exclude>
+              </excludes>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+  </profiles>
+
+</project>

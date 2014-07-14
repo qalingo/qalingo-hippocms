@@ -1,0 +1,32 @@
+/*
+ * Copyright 2011-2013 Hippo B.V. (http://www.onehippo.com)
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Header */
+#hd { background: url(../images/bg-reseller-header.png) no-repeat; }
+
+/* Header - Login */
+#hd #login span { background: url(../images/bg-login-small-reseller.png) repeat-x -1px 0; }
+#hd #login span.username { background: url("../images/hover-main-nav.png") repeat-x scroll 0 1px transparent; margin-right: 10px; padding-left: 10px; text-align: center; }
+#hd #login span a.black { display: block; font-weight: bold; font-size: 93%; color: #333333; padding: 5px 10px 0; }
+#hd #login-form { background: url(../images/bg-login-brown.png) no-repeat 0 0; }
+
+
+/* Reseller contact box */
+#bd .reseller-contact li.pic { display: inline-block; }
+#bd .reseller-contact li.message { display: inline; position: absolute; padding: 0px 10px 0px 10px; width: 160px; }
+#bd .reseller-contact li.action { height: 35px; margin-top:5px; text-align: center; line-height: 2.3; vertical-align: top; }
+#bd .reseller-contact li.contact { background: url('../images/bg-reseller-contact.png') no-repeat scroll 0 0 transparent;  }
+#bd .reseller-contact li.faq { background: url('../images/bg-reseller-faq.png') no-repeat scroll 0 0 transparent; }
+#bd .reseller-contact li.action a { color: #ffffff; font-weight: bold; }

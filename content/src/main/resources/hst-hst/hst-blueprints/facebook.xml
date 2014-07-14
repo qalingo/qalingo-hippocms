@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="facebook" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:blueprint</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>1537f580-7a45-4061-ac46-575b4a65af23</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:description" sv:type="String">
+    <sv:value>New Facebook Page Tab Blueprint</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:name" sv:type="String">
+    <sv:value>Facebook Page Tab</sv:value>
+  </sv:property>
+  <sv:node sv:name="hst:channel">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:channel</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>80aa15d6-51d7-4331-aaab-f6face2eb740</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:channelinfoclass" sv:type="String">
+      <sv:value>com.onehippo.gogreen.channels.WebsiteInfo</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:name" sv:type="String">
+      <sv:value>Facebook Page Tab</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:type" sv:type="String">
+      <sv:value>facebook</sv:value>
+    </sv:property>
+    <sv:node sv:name="hst:channelinfo">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:channelinfo</sv:value>
+      </sv:property>
+      <sv:property sv:name="logo" sv:type="String">
+        <sv:value>/content/gallery/logos/hippo-go-green.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="pageTitlePrefix" sv:type="String">
+        <sv:value>Hippo Go Green</sv:value>
+      </sv:property>
+      <sv:property sv:name="themeCss" sv:type="String">
+        <sv:value>/content/assets/themes/css/green.css</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hst:site">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:site</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:content" sv:type="String">
+      <sv:value>/content/documents/hippogogreen</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hst:configuration">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:configuration</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>23f8c94f-6e61-47ea-9edf-98f40451562f</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:inheritsfrom" sv:type="String">
+      <sv:value>../common</sv:value>
+    </sv:property>
+    <sv:node sv:name="hst:pages">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:pages</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>dad2d7e0-893f-4677-bd26-1f272113c66d</sv:value>
+      </sv:property>
+      <sv:node sv:name="defaultpage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>33cd5ba1-d07a-46b6-a737-b5cf092f90f0</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>com.onehippo.gogreen.components.BaseComponent</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>org.hippoecm.hst.core.container.custom.errorhandler</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>com.onehippo.gogreen.exceptions.CustomPageErrorHandler</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>layout.facebook.ftl</sv:value>
+        </sv:property>
+        <sv:node sv:name="header">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>a10367a4-5b1a-4110-81d8-86a05a952454</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>hst:components/header</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="main">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>b2605f7f-27cc-4aa0-9a26-65620073e474</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>standard.main.ftl</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="standardpage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>b3af333e-d9a0-4557-b63a-8ccb88a56ecd</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:abstractpages/defaultpage</sv:value>
+        </sv:property>
+        <sv:node sv:name="main">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>13a731e1-63e9-43b5-b765-8f6799163025</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>standard.main.ftl</sv:value>
+          </sv:property>
+          <sv:node sv:name="left">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>a112b632-e861-406d-9b15-75f7fe4da11e</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:template" sv:type="String">
+              <sv:value>standard.main.left</sv:value>
+            </sv:property>
+            <sv:node sv:name="leftmenu">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:component</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>d6ea0fab-53f1-4fe1-a214-bb4a31b009cb</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>standard.main.left.leftmenu</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="homepage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>63c48778-b2f0-404f-a33f-c9c6d9794b89</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:abstractpages/defaultpage</sv:value>
+        </sv:property>
+        <sv:node sv:name="main">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>6ab46d60-32b3-4aa3-9ebc-27e94ee082a0</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>home.facebook.main</sv:value>
+          </sv:property>
+          <sv:node sv:name="home-boxes-intro">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:containercomponentreference</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencecomponent" sv:type="String">
+              <sv:value>homepage/home-boxes-intro</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="error">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>b3d86fea-2ab3-477f-a975-27f10920fe8b</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:pages/simplepage</sv:value>
+        </sv:property>
+        <sv:node sv:name="main">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:component</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>b15c6d3a-b899-4308-af22-904c713e96a4</sv:value>
+          </sv:property>
+          <sv:node sv:name="content">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>bf269f40-0bc8-4acc-82c0-5658db102e10</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:componentclassname" sv:type="String">
+              <sv:value>com.onehippo.gogreen.components.search.ErrorSearchComponent</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+              <sv:value>pageSize</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+              <sv:value>6</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:template" sv:type="String">
+              <sv:value>search.results</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="right">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:component</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>24f6ee0d-86f4-467a-87cc-108c31b5c20f</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:template" sv:type="String">
+              <sv:value>error.right</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="hst:sitemap">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemap</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>928183c7-d5da-41da-b075-fe8c1b3b29ea</sv:value>
+      </sv:property>
+      <sv:node sv:name="root">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>8120a02f-5670-4a3e-a4b9-486d526a0f9f</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/homepage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:refId" sv:type="String">
+          <sv:value>home</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>c372bb39-a188-43dc-ab86-87057a895756</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/error</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="hst:workspace">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:workspace</sv:value>
+      </sv:property>
+      <sv:node sv:name="hst:sitemenus">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenus</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>4df9fb21-b5d9-4874-aefc-5eecbda5c5fd</sv:value>
+        </sv:property>
+        <sv:node sv:name="mainnavigation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenu</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>8343b72b-a467-4c6b-8e0d-ea7860325751</sv:value>
+          </sv:property>
+          <sv:node sv:name="Home">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>30621d7f-db39-4219-acf1-d8b50d161b4c</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>home</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="News &amp; Events">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>ccf4d584-9d3a-4c37-bfbc-2b220fda5f3d</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>news</sv:value>
+            </sv:property>
+            <sv:node sv:name="Events overview">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>6d18cae6-bf09-4676-9e86-52d3bf603226</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>events</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="Jobs">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>396fec02-61ad-4d17-b729-8a4b68d51e82</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>jobs</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Products">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>e438cd75-3ff1-45db-917c-51605891a33d</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>products</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="About">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>2281b1aa-7bfa-4e8c-836f-a6c2b9cd4990</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>about</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="aboutmenu">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenu</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>7faf8677-fdd7-4dde-9198-b394ff05b888</sv:value>
+          </sv:property>
+          <sv:node sv:name="About">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>8ec53618-82f0-4321-bcb2-64b0d497dfec</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:depth" sv:type="Long">
+              <sv:value>3</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>about</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="FAQ">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>0e33e156-36da-4ef9-8270-1260ef958c26</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>faq</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="RSS">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>f6af4de6-86d7-441d-b89b-11de447a45d5</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>rss</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Sitemap">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>2aef58a9-1078-470b-a2b4-2aac86c7bb00</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>sitemap</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="API">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>a00081b0-01be-46cc-b76e-a9ec06e80dcd</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:depth" sv:type="Long">
+              <sv:value>3</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>rest</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="servicemenu">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenu</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>e4aa0ef0-b436-4b5c-9e4a-326f284f2672</sv:value>
+          </sv:property>
+          <sv:node sv:name="FAQ">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>db838b29-2c46-495f-b657-1db70fe4d6e5</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>faq</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="RSS">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>64f3a449-ac1a-48bf-b165-f22ae092b60d</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>rss</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Sitemap">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>d5618a07-5cb6-43e9-8dbb-d59dffd2c7a6</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>sitemap</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="API">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>d96999e2-2a8a-4e98-9814-e1c0fdfbc92b</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>rest</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="sectionsmenu">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenu</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>69d8f132-cc67-45d1-8ef1-af4593c6252c</sv:value>
+          </sv:property>
+          <sv:node sv:name="News &amp; Events">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>61f0f5c3-4c2f-492b-a394-a5c38e5b9206</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>news</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Jobs">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>bb99ea5e-6537-400f-9a93-e4b8400e9256</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>jobs</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Products">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>9f1ffaf5-8ad8-4477-92c4-11fa9db51955</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>products</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="About">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>13027375-0dee-49f1-9598-5f08e6478ac0</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>about</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Mobile">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>027861eb-0202-48b6-a780-d07f3319eefc</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>mobile</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hst:containers">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentfolder</sv:value>
+        </sv:property>
+        <sv:node sv:name="homepage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentfolder</sv:value>
+          </sv:property>
+          <sv:node sv:name="home-boxes-intro">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:containercomponent</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>2b0005c3-c839-4614-bb0c-7bf9da697f65</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:xtype" sv:type="String">
+              <sv:value>HST.vBox</sv:value>
+            </sv:property>
+            <sv:node sv:name="banner">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:containeritemcomponent</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>8de86db0-2583-4c16-b907-80bb3f95f9d2</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:componentclassname" sv:type="String">
+                <sv:value>com.onehippo.gogreen.components.common.Banner</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+                <sv:value>org.hippoecm.hst.core.parameters.Parameter.hide</sv:value>
+                <sv:value>bannerlocation</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+                <sv:value>on</sv:value>
+                <sv:value>common/banners/high-above-the-earth-satellites-track-melting-ice</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>common.banner</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:xtype" sv:type="String">
+                <sv:value>HST.Item</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="latestevents">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:containeritemcomponent</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>8ebac1c0-9f8f-4f97-b543-ca07cc324fdb</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:componentclassname" sv:type="String">
+                <sv:value>com.onehippo.gogreen.components.common.LatestItems</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:iconpath" sv:type="String">
+                <sv:value>images/catalog/icon-latest-events.png</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:label" sv:type="String">
+                <sv:value>Latest Events</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+                <sv:value>scope</sv:value>
+                <sv:value>nodetype</sv:value>
+                <sv:value>limit</sv:value>
+                <sv:value>constraint</sv:value>
+                <sv:value>sortOrder</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+                <sv:value>events</sv:value>
+                <sv:value>hippogogreen:event</sv:value>
+                <sv:value>1</sv:value>
+                <sv:value>upcoming</sv:value>
+                <sv:value>ascending</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>events.latest</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:xtype" sv:type="String">
+                <sv:value>HST.Item</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="latestjobs">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:containeritemcomponent</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>96a257b8-f38e-4b84-9fe8-e2b5def6d85e</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:componentclassname" sv:type="String">
+                <sv:value>com.onehippo.gogreen.components.common.LatestItems</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:iconpath" sv:type="String">
+                <sv:value>images/catalog/icon-jobs.png</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:label" sv:type="String">
+                <sv:value>Latest Jobs</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+                <sv:value>scope</sv:value>
+                <sv:value>nodetype</sv:value>
+                <sv:value>limit</sv:value>
+                <sv:value>orderBy</sv:value>
+                <sv:value>sortOrder</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+                <sv:value>jobs</sv:value>
+                <sv:value>hippogogreen:job</sv:value>
+                <sv:value>1</sv:value>
+                <sv:value>hippogogreen:closingdate</sv:value>
+                <sv:value>descending</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>jobs.latest</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:xtype" sv:type="String">
+                <sv:value>HST.Item</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="featuredproducts">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:containeritemcomponent</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>1d5b80b1-cb89-4295-99b3-e78deeff7424</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:componentclassname" sv:type="String">
+                <sv:value>com.onehippo.gogreen.components.products.FeaturedProducts</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:iconpath" sv:type="String">
+                <sv:value>images/catalog/icon-featured-products.png</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:label" sv:type="String">
+                <sv:value>Featured Products</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+                <sv:value>product3</sv:value>
+                <sv:value>product2</sv:value>
+                <sv:value>product1</sv:value>
+              </sv:property>
+              <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+                <sv:value>products/re-use/2010/07/Govino-Shatterproof-Recyclable-Stemless-Wine-Glasses</sv:value>
+                <sv:value>products/animal--garden/2010/08/gardn-gro-filter</sv:value>
+                <sv:value>products/food/2010/07/organic-cotton-reusable-lunch-bag</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:template" sv:type="String">
+                <sv:value>products.featured.facebook</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:xtype" sv:type="String">
+                <sv:value>HST.Item</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>

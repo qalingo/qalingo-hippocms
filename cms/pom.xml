@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  Copyright 2010-2013 Hippo B.V. (http://www.onehippo.com)
+
+  Licensed under the Apache License, Version 2.0 (the  "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS"
+  BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.hoteia.qalingo.hippocms</groupId>
+    <artifactId>hippo-qalingo</artifactId>
+    <version>1.00-SNAPSHOT</version>
+  </parent>
+
+  <name>Hippo Qalingo CMS</name>
+  <artifactId>hippo-qalingo-cms</artifactId>
+  <packaging>war</packaging>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.onehippo.cms7.hst.dependencies</groupId>
+      <artifactId>hst-repository-dependencies</artifactId>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7.hst.dependencies</groupId>
+      <artifactId>hst-cms-dependencies</artifactId>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-channel-manager-frontend</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-channel-manager-repository</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hoteia.qalingo.hippocms</groupId>
+      <artifactId>hippo-qalingo-content</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>   
+    
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-package-cms-dependencies</artifactId>
+      <type>pom</type>
+      <exclusions>
+        <exclusion>
+          <artifactId>rome</artifactId>
+          <groupId>rome</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- compile dependencies -->
+    
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-cms-gallery-frontend</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-cms-gotolink</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7.hst.toolkit-resources.addon.toolkit-cnd</groupId>
+      <artifactId>hst-addon-cnd</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7.hst.toolkit-resources.addon</groupId>
+      <artifactId>hst-addon-repository</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.addon.frontend.gallerypicker</groupId>
+      <artifactId>gallerypicker</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.wicket</groupId>
+          <artifactId>wicket</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge.selectionplugins</groupId>
+      <artifactId>selectionplugins-addon-repository</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge.selectionplugins</groupId>
+      <artifactId>selectionplugins-addon-cms</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge.sitemap</groupId>
+      <artifactId>sitemap-content</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>relateddocs</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>tcmp-addon-frontend</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.wicket</groupId>
+          <artifactId>wicket</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.wicket</groupId>
+          <artifactId>wicket-extensions</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.wicket</groupId>
+          <artifactId>wicket-velocity</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>tcmp-addon-repository</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge.poll</groupId>
+      <artifactId>poll-addon-repository</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo</groupId>
+      <artifactId>taxonomy-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo</groupId>
+      <artifactId>taxonomy-addon-frontend</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo</groupId>
+      <artifactId>taxonomy-addon-repository</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>dashboard-document-wizard</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7</groupId>
+      <artifactId>hippo-cms-google-analytics-frontend</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.cms7.hst.client-modules</groupId>
+      <artifactId>hst-google-analytics-repository</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+
+    <defaultGoal>package</defaultGoal>
+    <finalName>cms</finalName>
+
+    <resources>
+      <resource>
+        <filtering>false</filtering>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**</include>
+        </includes>
+      </resource>
+      <resource>
+        <filtering>false</filtering>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**</include>
+        </includes>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Hippo-Release-Version>${hippo.release.version}</Hippo-Release-Version>
+              <Project-Version>${project.version}</Project-Version>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <configuration>
+          <configuration>
+            <type>runtime</type>
+          </configuration>
+          <container>
+            <type>remote</type>
+          </container>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>test-config</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.hoteia.qalingo.hippocms</groupId>
+          <artifactId>hippo-qalingo-test-server-config</artifactId>
+          <version>${project.version}</version>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>prod-config</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.hoteia.qalingo.hippocms</groupId>
+          <artifactId>hippo-qalingo-prod-server-config</artifactId>
+          <version>${project.version}</version>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+
+</project>

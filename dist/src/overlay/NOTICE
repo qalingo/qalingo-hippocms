@@ -1,0 +1,71 @@
+Hippo Go Green
+Copyright 2010-2014 Hippo B.V. (http://www.onehippo.com)
+
+This product includes software developed by:
+Hippo B.V., Amsterdam, The Netherlands (http://www.onehippo.com/);
+The Apache Software Foundation (http://www.apache.org/).
+
+NOTICE: Only our own original work is licensed under the terms of the
+Apache License Version 2.0. The licenses of some libraries might impose
+different redistribution or general licensing terms than those stated in the
+Apache License. Users and redistributors are hereby requested to verify these
+conditions and agree upon them.
+
+========================================================================================================================
+The Hippo Go Green distribution includes and bundles an installation of Apache Tomcat under folder tomcat.
+Apache Tomcat is available under the Apache License, Version 2.0, but also comes with separate copyright notice and
+license terms. Its usage is subject to the terms and conditions as described in the following files:
+
+    tomcat-NOTICE
+    tomcat-LICENSE
+
+Note: if the above files contain references to specific sub-components within the tomcat application, then these
+references are to be resolved relative to the tomcat/ folder.
+
+========================================================================================================================
+The Hippo Go Green distribution includes the 'cms' and 'site' web applications deployed under the folder tomcat/webapps/
+of the bundled Tomcat installation. These web applications are available under the Apache License,
+Version 2.0, but also come with separate copyright notices and license terms. Their usage is subject to
+the terms and  conditions as described in the following files:
+
+    cms-NOTICE
+    cms-LICENSE
+    site-NOTICE
+    site-LICENSE
+
+Note: if the above files contain references to sub-components within the web applications themselves, then these
+references are to be resolved relative to the root location of the cms or site web application,
+respectively tomcat/webapps/cms/ or tomcat/webapps/site/.
+
+========================================================================================================================
+Additional notice information is applicable for the following sub components:
+
+------------------------------------------------------------------------------------------------------------------------
+tomcat/common/lib/geronimo-jta_1.1_spec-1.1.jar
+
+    JTA 1.1
+    Copyright 2003-2007 The Apache Software Foundation
+
+------------------------------------------------------------------------------------------------------------------------
+tomcat/shared/lib/hippo-cms7-commons-1.04.00.jar
+
+    Hippo CMS7 Commons
+    Copyright 2012-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+tomcat/shared/lib/hippo-repository-*-2.26.00.jar
+
+    Hippo Repository
+    Copyright 2007-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+tomcat/shared/lib/hippo-services-1.04.00.jar
+
+    Hippo CMS7 Services
+    Copyright 2012-2014 Hippo B.V. (http://www.onehippo.com)
+
+------------------------------------------------------------------------------------------------------------------------
+tomcat/shared/lib/log4j-1.2.17.jar
+
+    Apache log4j
+    Copyright 2007 The Apache Software Foundation

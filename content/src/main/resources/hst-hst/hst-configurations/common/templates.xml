@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hst:templates">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:templates</sv:value>
+  </sv:property>
+  <sv:node sv:name="common.comments">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/comments.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="common.feed">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/feed.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="common.relateddocuments">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/relateddocuments.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="common.simpledocument">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/simpledocument.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="common.tagcloud">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/tagcloud.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="common.video">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/video.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="common.map">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/map.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="layout.webpage.ftl">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true">
+      <sv:value>header</sv:value>
+      <sv:value>body</sv:value>
+      <sv:value>footer</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:script" sv:type="String">
+      <sv:value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+        &lt;#--
+
+        Copyright 2010-2014 Hippo B.V. (http://www.onehippo.com)
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+
+        --&gt;
+        &lt;#assign fmt=JspTaglibs["http://java.sun.com/jsp/jstl/fmt"]&gt;
+        &lt;#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]&gt;
+        &lt;#assign ga=JspTaglibs["http://www.onehippo.org/jsp/google-analytics"]&gt;
+
+        &lt;@hst.defineObjects /&gt;
+
+        &lt;#assign lang="${hstRequest.locale.language!}" /&gt;
+        &lt;#assign textSize="" /&gt;
+        &lt;#if hstRequest.cookies?has_content&gt;
+        &lt;#list hstRequest.cookies as cookie&gt;
+        &lt;#if cookie.name == "fontSize"&gt;
+        &lt;#assign textSize="${cookie.value}" /&gt;
+        &lt;/#if&gt;
+        &lt;/#list&gt;
+        &lt;/#if&gt;
+
+        &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="${lang}"&gt;
+        &lt;head&gt;
+        &lt;@hst.headContributions categoryExcludes="css,jsInternal,jsExternal,scripts"/&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;
+        &lt;link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /&gt;
+        &lt;link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /&gt;
+        &lt;meta name="DC.keywords" content="&lt;@fmt.message key="layout.webpage.metadckeywords"/&gt;" /&gt;
+        &lt;meta name="description" content="&lt;@fmt.message key="layout.webpage.metadescription"/&gt;" /&gt;
+        &lt;meta name="DC.type" content="webpagina" scheme="DCMIType" /&gt;
+        &lt;meta name="DCTERMS.issued" content="2009-07-09T10:31" scheme="DCTERMS.W3CDTF" /&gt;
+        &lt;meta name="DCTERMS.available" content="2009-07-09T10:31" scheme="DCTERMS.W3CDTF" /&gt;
+        &lt;meta name="DC.title" content="&lt;@fmt.message key="layout.webpage.metadctitle"/&gt;" /&gt;
+        &lt;meta name="DC.language" content="${lang}" scheme="DCTERMS.RFC3066" /&gt;
+
+        &lt;@hst.link var="yuicss" path="/css/yui-css.css"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${yuicss}"/&gt;
+
+        &lt;@hst.link var="screencss" path="/css/screen.css"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${screencss}"/&gt;
+
+        &lt;#if hstRequest.requestContext.resolvedMount.mount.channelInfo.themeCss?has_content&gt;
+        &lt;@hst.link var="themecss" path="/binaries${hstRequest.requestContext.resolvedMount.mount.channelInfo.themeCss}"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${themecss}"/&gt;
+        &lt;/#if&gt;
+
+        &lt;#if loggedin&gt;
+        &lt;@hst.link var="resellercss" path="/css/reseller.css"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${resellercss}"/&gt;
+        &lt;/#if&gt;
+
+        &lt;@hst.headContributions categoryIncludes="css"/&gt;
+
+        &lt;@hst.link var="jquery" path="/js/jquery-1.9.1.js"/&gt;
+        &lt;script src="${jquery}" type="text/javascript"&gt;&lt;/script&gt;
+
+        &lt;@hst.link var="jquerymbbrowser" path="/js/jquery.mb.browser.min.js"/&gt;
+        &lt;script src="${jquerymbbrowser}" type="text/javascript"&gt;&lt;/script&gt;
+
+        &lt;@hst.link  var="jqueryuicore" path="/js/jquery.ui.core.js"/&gt;
+        &lt;script src="${jqueryuicore}" type="text/javascript"&gt;&lt;/script&gt;
+
+        &lt;@hst.link var="jqueryuidatepicker" path="/js/jquery.ui.datepicker.js"/&gt;
+        &lt;script src="${jqueryuidatepicker}" type="text/javascript"&gt;&lt;/script&gt;
+
+        &lt;@hst.link var="favicon" path="/images/favicon.ico"/&gt;
+        &lt;link rel="icon" href="${favicon}" type="image/x-icon"/&gt;
+        &lt;link rel="shortcut icon" href="${favicon}" type="image/x-icon"/&gt;
+
+        &lt;@hst.link var="appletouchicon" path="/images/apple-touch-icon.png"/&gt;
+        &lt;link rel="apple-touch-icon" href="${appletouchicon}"/&gt;
+
+        &lt;!--[if lte IE 7]&gt;
+        &lt;@hst.link var="ie7css" path="/css/ie7.css"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${ie7css}"&gt;
+        &lt;script type="text/javascript"&gt;ie7 = true;&lt;/script&gt;
+        &lt;![endif]--&gt;
+
+        &lt;!--
+        &lt;@hst.link var="print" path="/css/print.css"/&gt;
+        &lt;link rel="stylesheet" media="print" type="text/css" href="${print}"&gt;
+        --&gt;
+
+        &lt;@hst.link var="rssHref" path="/rss" /&gt;
+        &lt;@fmt.message var="rssTitle" key="standard.header.rss"/&gt;
+        &lt;link rel="alternate" type="application/rss+xml" title="${rssTitle}" href="${rssHref}"/&gt;
+
+        &lt;/head&gt;
+        &lt;body&lt;#if textSize != ""&gt; style="font-size: ${textSize}px;"&lt;/#if&gt;&gt;
+        &lt;!-- document wrapper --&gt;
+
+        &lt;!--[if lte IE 6]&gt;
+        &lt;div id="ie6-warning"&gt;
+        &lt;a href="http://www.onehippo.org/cms7"&gt;&lt;img src="&lt;@hst.link path="/images/logo-hippo2.png"/&gt;" alt="&lt;@fmt.message key="layout.webpage.hippologoalt"/&gt;" /&gt;&lt;/a&gt;
+        &lt;p&gt;&lt;@fmt.message key="layout.webpage.welcome"/&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;@fmt.message key="layout.webpage.unsupportedbrowser"/&gt;&lt;/p&gt;
+        &lt;ul class="bullet-points"&gt;
+        &lt;li&gt;&lt;a href="http://getfirefox.com"&gt;&lt;@fmt.message key="layout.webpage.firefox"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.opera.com/download"&gt;&lt;@fmt.message key="layout.webpage.opera"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.google.com/chrome"&gt;&lt;@fmt.message key="layout.webpage.chrome"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx"&gt;&lt;@fmt.message key="layout.webpage.ie8"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;![endif]--&gt;
+
+        &lt;div id="doc" class="yui-d-custom"&gt;
+        &lt;div id="wrapper"&gt;
+        &lt;div id="wrapper2"&gt;
+        &lt;!-- header --&gt;
+        &lt;@hst.include ref="header"/&gt;
+
+        &lt;!-- body / main --&gt;
+        &lt;@hst.include ref="main"/&gt;
+
+        &lt;!-- footer --&gt;
+        &lt;@hst.include ref="footer"/&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="ft-disclaimer"&gt;
+        &lt;@fmt.message key="layout.webpage.disclaimer"&gt;
+        &lt;@fmt.param&gt;&lt;a href="http://www.onehippo.com/en/products/cms"&gt;&lt;/@fmt.param&gt;
+        &lt;@fmt.param&gt;&lt;a href="http://www.onehippo.org/site-toolkit"&gt;&lt;/@fmt.param&gt;
+        &lt;@fmt.param&gt;&lt;a href="https://issues.onehippo.com/browse/GOGREEN"&gt;&lt;/@fmt.param&gt;
+        &lt;@fmt.param&gt;&lt;/a&gt;&lt;/@fmt.param&gt;
+        &lt;/@fmt.message&gt;
+        &lt;/div&gt;
+
+        &lt;@hst.link var="jscommon" path="/js/js-common.js"/&gt;
+        &lt;script src="${jscommon}" type="text/javascript"&gt;&lt;/script&gt;
+
+        &lt;@hst.headContributions categoryIncludes="jsExternal"/&gt;
+        &lt;@hst.headContributions categoryIncludes="jsInternal"/&gt;
+        &lt;#if !composermode&gt;
+        &lt;@ga.accountId/&gt;
+        &lt;@hst.link var="googleAnalytics" path="/resources/google-analytics.js"/&gt;
+        &lt;script src="${googleAnalytics}" type="text/javascript"&gt;&lt;/script&gt;
+        &lt;/#if&gt;
+        &lt;@hst.headContributions categoryIncludes="scripts"/&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="base.header.ftl">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true">
+      <sv:value>login</sv:value>
+      <sv:value>mainnavigation</sv:value>
+      <sv:value>search</sv:value>
+      <sv:value>topnav</sv:value>
+      <sv:value>langnavigation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:script" sv:type="String">
+      <sv:value>&lt;#--&#13;
+&#13;
+  Copyright (C) 2014 Hippo B.V. (http://www.onehippo.com)&#13;
+&#13;
+  Licensed under the Apache License, Version 2.0 (the "License");&#13;
+  you may not use this file except in compliance with the License.&#13;
+  You may obtain a copy of the License at&#13;
+&#13;
+   http://www.apache.org/licenses/LICENSE-2.0&#13;
+ &#13;
+  Unless required by applicable law or agreed to in writing, software&#13;
+  distributed under the License is distributed on an "AS IS" BASIS,&#13;
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#13;
+  See the License for the specific language governing permissions and&#13;
+  limitations under the License.&#13;
+&#13;
+--&gt;&#13;
+&#13;
+&lt;#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]&gt;&#13;
+&#13;
+&lt;!-- header --&gt;&#13;
+&lt;div id="hd" class="base"&gt;&#13;
+  &lt;!-- top navigation --&gt;&#13;
+  &lt;@hst.include ref="topnav"/&gt;&#13;
+  &#13;
+  &lt;!-- logo --&gt;&#13;
+  &lt;@hst.include ref="logo"/&gt;&#13;
+&lt;/div&gt;</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.ftl">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true">
+      <sv:value>login</sv:value>
+      <sv:value>mainnavigation</sv:value>
+      <sv:value>search</sv:value>
+      <sv:value>topnav</sv:value>
+      <sv:value>langnavigation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:script" sv:type="String">
+      <sv:value>&lt;#--&#13;
+&#13;
+  Copyright (C) 2010-2014 Hippo B.V. (http://www.onehippo.com)&#13;
+&#13;
+  Licensed under the Apache License, Version 2.0 (the "License");&#13;
+  you may not use this file except in compliance with the License.&#13;
+  You may obtain a copy of the License at&#13;
+&#13;
+   http://www.apache.org/licenses/LICENSE-2.0&#13;
+ &#13;
+  Unless required by applicable law or agreed to in writing, software&#13;
+  distributed under the License is distributed on an "AS IS" BASIS,&#13;
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#13;
+  See the License for the specific language governing permissions and&#13;
+  limitations under the License.&#13;
+&#13;
+--&gt;&#13;
+&#13;
+&lt;#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]&gt;&#13;
+&#13;
+&lt;!-- header --&gt;&#13;
+&lt;div id="hd"&gt;&#13;
+  &lt;!-- top navigation --&gt;&#13;
+  &lt;@hst.include ref="topnav"/&gt;&#13;
+  &#13;
+  &lt;!-- logo --&gt;&#13;
+  &lt;@hst.include ref="logo"/&gt;&#13;
+&#13;
+  &lt;!-- search bar --&gt;&#13;
+  &lt;@hst.include ref="search"/&gt;&#13;
+&#13;
+  &lt;!--  language navigation --&gt;&#13;
+  &lt;@hst.include ref="langnavigation" /&gt;&#13;
+&#13;
+  &lt;!-- main navigation --&gt;&#13;
+  &lt;@hst.include ref="mainnavigation"/&gt;&#13;
+&#13;
+  &lt;!-- login / registration --&gt;&#13;
+  &lt;@hst.include ref="login"/&gt;&#13;
+&lt;/div&gt;</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.topnav">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/header/topnav.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.logo.ftl">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:script" sv:type="String">
+      <sv:value>&lt;#--&#13;
+&#13;
+Copyright (C) 2014 Hippo B.V.&#13;
+&#13;
+Licensed under the Apache License, Version 2.0 (the "License");&#13;
+you may not use this file except in compliance with the License.&#13;
+You may obtain a copy of the License at&#13;
+&#13;
+http://www.apache.org/licenses/LICENSE-2.0&#13;
+&#13;
+Unless required by applicable law or agreed to in writing, software&#13;
+distributed under the License is distributed on an "AS IS" BASIS,&#13;
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#13;
+See the License for the specific language governing permissions and&#13;
+limitations under the License.&#13;
+&#13;
+--&gt;&#13;
+&#13;
+&lt;#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]&gt;&#13;
+&#13;
+&lt;@hst.defineObjects/&gt;&#13;
+&#13;
+&lt;#assign lang=hstRequest.locale.language/&gt;&#13;
+&lt;@hst.link var="linkHome" siteMapItemRefId="home"/&gt;&#13;
+&#13;
+&lt;#if logo??&gt;&#13;
+  &lt;@hst.link var="imgLogo" hippobean=logo.original /&gt;&#13;
+  &lt;h1&gt;&#13;
+    &lt;a href="${linkHome}"&gt;&lt;img src="${imgLogo}" alt="${logo.alt!''}" class="logo" width="${logo.original.width}" height="${logo.original.height}" /&gt;&lt;/a&gt;&#13;
+  &lt;/h1&gt;&#13;
+&lt;/#if&gt;</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.mainnavigation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/header/mainnavigation.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.langnavigation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/header/langnavigation.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.search">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/header/search.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.login">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/header/login.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.main.ftl">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true">
+      <sv:value>leftmenu</sv:value>
+      <sv:value>pageactions</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:script" sv:type="String">
+      <sv:value>
+        &lt;#--
+
+        Copyright (C) 2010 Hippo B.V.
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+
+        --&gt;
+
+        &lt;#assign fmt=JspTaglibs["http://java.sun.com/jsp/jstl/fmt"]&gt;
+        &lt;#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]&gt;
+
+        &lt;div id="bd" class="yui-t1"&gt;
+
+        &lt;!-- left --&gt;
+        &lt;@hst.include ref="left"/&gt;
+
+        &lt;!-- content --&gt;
+        &lt;@hst.include ref="content"/&gt;
+
+        &lt;!-- right --&gt;
+        &lt;@hst.include ref="right"/&gt;
+
+        &lt;/div&gt;
+      </sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.main.left">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/main/left.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.main.left.leftmenu">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/main/left/leftmenu.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.main.left.pageactions">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/main/left/pageactions.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.main.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/main/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.main.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/main/right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.footer">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/footer/footer.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="home.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/home/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="home.boxes">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/home/boxes.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="products.facetnav">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/facetnav.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="products.overview">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/overview.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="products.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true">
+      <sv:value>content</sv:value>
+      <sv:value>productfacetnav</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="home.products.facetnav">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/home/productsfacetnav.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="news.overview.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/news/overview/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="news.detail.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/news/detail/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="news.overview.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/news/overview/right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="news.overview.facetnav">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/news/overview/facetnav.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="news.latest">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/news/latest.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="comments.latest">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/comments/latest.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="products.featured">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/featured.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="product.suggestform">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/suggest.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="simplepage.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/simple/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="jobs-overview-main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/jobs/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="jobs-right-facet">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/jobs/jobfacet.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="jobs-detail">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/jobs/detail.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="events.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true">
+      <sv:value>eventsandcalendar</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/events/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="events.main.eventsandcalendar">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/events/eventsandcalendar.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="products.leftnav">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/leftnav.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="product.detail.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="product.detail.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/detail.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="news.detail.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/news/detail/right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="events.latest">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/events/latest.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="jobs.latest">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/jobs/latest.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="events.detail.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/events/detail/right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="events.detail.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/events/detail/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="newsandevents.leftmenu">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/newsandevents-leftmenu.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="products.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="search.results">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/search/results.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="search.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/search/search-right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="reviews.latest">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/reviews/latest.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="faq.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/service/faq.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="faq.detail">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/service/faq-detail.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="faq.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/service/faq-right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="error.right">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/search/error-right.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="about.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/about/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="importer.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/importer/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="home.polls">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/poll/poll.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="about.leftmenu">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/about/leftmenu.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.footer.menu">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/footer/menu.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="rss.news">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/rss/rss-news.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="sitemap.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/service/sitemap-main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="sitemap.menu">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/service/sitemap-menu.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="search.facetnav">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/search/facetnav.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="restapi-detail">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/restapi/detail.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="restapi-browser">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/restapi/browser.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="restapi-overview">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/restapi/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="restapi-documentation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/restapi/documentation.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="common.bannercarousel">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/common/bannercarousel.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="layout.facebook.ftl">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true">
+      <sv:value>header</sv:value>
+      <sv:value>body</sv:value>
+      <sv:value>footer</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:script" sv:type="String">
+      <sv:value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+        &lt;#--
+
+        Copyright (C) 2010 Hippo B.V.
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+
+        --&gt;
+        &lt;#assign fmt=JspTaglibs["http://java.sun.com/jsp/jstl/fmt"]&gt;
+        &lt;#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]&gt;
+        &lt;#assign ga=JspTaglibs["http://www.onehippo.org/jsp/google-analytics"]&gt;
+
+        &lt;@hst.defineObjects /&gt;
+
+        &lt;#assign lang="${hstRequest.locale.language!}" /&gt;
+        &lt;#assign textSize="" /&gt;
+        &lt;#if hstRequest.cookies?has_content&gt;
+        &lt;#list hstRequest.cookies as cookie&gt;
+        &lt;#if cookie.name == "fontSize"&gt;
+        &lt;#assign textSize="${cookie.value}" /&gt;
+        &lt;/#if&gt;
+        &lt;/#list&gt;
+        &lt;/#if&gt;
+
+        &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="${lang}" xmlns:fb="http://ogp.me/ns/fb#"&gt;
+        &lt;head&gt;
+        &lt;@hst.headContributions categoryExcludes="css,jsInternal,jsExternal"/&gt;
+        &lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;
+        &lt;link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /&gt;
+        &lt;link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /&gt;
+        &lt;meta name="DC.keywords" content="&lt;@fmt.message key="layout.webpage.metadckeywords"/&gt;" /&gt;
+        &lt;meta name="description" content="&lt;@fmt.message key="layout.webpage.metadescription"/&gt;" /&gt;
+        &lt;meta name="DC.type" content="webpagina" scheme="DCMIType" /&gt;
+        &lt;meta name="DCTERMS.issued" content="2009-07-09T10:31" scheme="DCTERMS.W3CDTF" /&gt;
+        &lt;meta name="DCTERMS.available" content="2009-07-09T10:31" scheme="DCTERMS.W3CDTF" /&gt;
+        &lt;meta name="DC.title" content="&lt;@fmt.message key="layout.webpage.metadctitle"/&gt;" /&gt;
+        &lt;meta name="DC.language" content="${lang}" scheme="DCTERMS.RFC3066" /&gt;
+
+        &lt;@hst.link var="yuicss" path="/css/yui-css.css"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${yuicss}"/&gt;
+
+        &lt;@hst.link var="screencss" path="/css/facebook/screen.css"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${screencss}"/&gt;
+
+        &lt;@hst.headContributions categoryIncludes="css"/&gt;
+
+        &lt;@hst.link var="jquery" path="/js/jquery-1.4.2.min.js"/&gt;
+        &lt;script src="${jquery}" type="text/javascript"&gt;&lt;/script&gt;
+
+        &lt;@hst.link var="favicon" path="/images/favicon.ico"/&gt;
+        &lt;link rel="icon" href="${favicon}" type="image/x-icon"/&gt;
+        &lt;link rel="shortcut icon" href="${favicon}" type="image/x-icon"/&gt;
+
+        &lt;@hst.link var="appletouchicon" path="/images/apple-touch-icon.png"/&gt;
+        &lt;link rel="apple-touch-icon" href="${appletouchicon}"/&gt;
+
+        &lt;!--[if lte IE 7]&gt;
+        &lt;@hst.link var="ie7css" path="/css/ie7.css"/&gt;
+        &lt;link rel="stylesheet" media="screen" type="text/css" href="${ie7css}"&gt;
+        &lt;script type="text/javascript"&gt;ie7 = true;&lt;/script&gt;
+        &lt;![endif]--&gt;
+
+        &lt;!--
+        &lt;@hst.link var="print" path="/css/print.css"/&gt;
+        &lt;link rel="stylesheet" media="print" type="text/css" href="${print}"&gt;
+        --&gt;
+
+        &lt;@hst.link var="rssHref" path="/rss" /&gt;
+        &lt;@fmt.message var="rssTitle" key="standard.header.rss"/&gt;
+        &lt;link rel="alternate" type="application/rss+xml" title="${rssTitle}" href="${rssHref}"/&gt;
+
+        &lt;/head&gt;
+        &lt;body&lt;#if textSize != ""&gt; style="font-size: ${textSize}px;"&lt;/#if&gt; &lt;#if preview&gt;class="facebook-preview"&lt;/#if&gt;&gt;
+        &lt;div id="fb-root"&gt;&lt;/div&gt;
+        &lt;script&gt;(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/${hstRequest.locale}/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;
+        &lt;!-- document wrapper --&gt;
+
+        &lt;!--[if lte IE 6]&gt;
+        &lt;div id="ie6-warning"&gt;
+        &lt;a href="http://www.onehippo.org/cms7"&gt;&lt;img src="&lt;@hst.link path="/images/logo-hippo2.png"/&gt;" alt="&lt;@fmt.message key="layout.webpage.hippologoalt"/&gt;" /&gt;&lt;/a&gt;
+        &lt;p&gt;&lt;@fmt.message key="layout.webpage.welcome"/&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;@fmt.message key="layout.webpage.unsupportedbrowser"/&gt;&lt;/p&gt;
+        &lt;ul class="bullet-points"&gt;
+        &lt;li&gt;&lt;a href="http://getfirefox.com"&gt;&lt;@fmt.message key="layout.webpage.firefox"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.opera.com/download"&gt;&lt;@fmt.message key="layout.webpage.opera"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.google.com/chrome"&gt;&lt;@fmt.message key="layout.webpage.chrome"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx"&gt;&lt;@fmt.message key="layout.webpage.ie8"/&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;![endif]--&gt;
+
+        &lt;div id="doc" class="yui-d-custom"&gt;
+        &lt;div id="wrapper"&gt;
+        &lt;div id="wrapper2"&gt;
+        &lt;!-- header --&gt;
+        &lt;@hst.include ref="header"/&gt;
+
+        &lt;!-- body / main --&gt;
+        &lt;@hst.include ref="main"/&gt;
+
+        &lt;!-- footer --&gt;
+        &lt;@hst.include ref="footer"/&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="ft-disclaimer"&gt;
+        &lt;@fmt.message key="layout.webpage.disclaimer"&gt;
+        &lt;@fmt.param&gt;&lt;a href="http://www.onehippo.com/en/products/cms"&gt;&lt;/@fmt.param&gt;
+        &lt;@fmt.param&gt;&lt;a href="http://www.onehippo.org/site-toolkit"&gt;&lt;/@fmt.param&gt;
+        &lt;@fmt.param&gt;&lt;a href="https://issues.onehippo.com/browse/GOGREEN"&gt;&lt;/@fmt.param&gt;
+        &lt;@fmt.param&gt;&lt;/a&gt;&lt;/@fmt.param&gt;
+        &lt;/@fmt.message&gt;
+        - &lt;a href="https://www.facebook.com/dialog/pagetab?app_id=248744221886853&amp;next=http://apps.facebook.com/hippogogreen/" target="_blank"&gt;ADD page tab&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;@hst.link var="jscommon" path="/js/js-common.js"/&gt;
+        &lt;script src="${jscommon}" type="text/javascript"&gt;&lt;/script&gt;
+
+        &lt;@hst.headContributions categoryIncludes="jsExternal"/&gt;
+        &lt;@hst.headContributions categoryIncludes="jsInternal"/&gt;
+        &lt;#if !composermode&gt;
+        &lt;@ga.accountId/&gt;
+        &lt;@hst.link var="googleAnalytics" path="/resources/google-analytics.js"/&gt;
+        &lt;script src="${googleAnalytics}" type="text/javascript"&gt;&lt;/script&gt;
+        &lt;/#if&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="products.featured.facebook">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/products/featured-facebook.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="home.facebook.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/facebook/home/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="reseller.contactbox">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/contact/resellerbox.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="prototypedpages.two-column">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/prototypedpages/two-column.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="prototypedpages.three-column">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:containers" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/prototypedpages/three-column.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

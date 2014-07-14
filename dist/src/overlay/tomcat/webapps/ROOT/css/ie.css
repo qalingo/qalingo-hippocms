@@ -1,0 +1,83 @@
+/*
+ * Copyright 2010-2013 Hippo B.V. (http://www.onehippo.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* Header */
+#home-logo {
+	top: 10px;
+} #home-logo a {
+	display: inline-block;
+}
+
+/* Footer */
+#ft {
+    height: 82px;
+} #footer-address, #footer-links {
+    margin-bottom: 0px;
+}
+
+/* Main nav */
+#main-nav {
+    top: 69px;
+} #main-nav .bb {
+    width: 0;
+} #main-nav .bb div {
+    width: 0;
+}
+
+/* Main */
+#page-functions li {
+    display: inline;
+    padding-left: 7px;
+} #page-functions .function a {
+  display: inline-block;
+}
+
+/* Home */
+#spotlight #previous, #spotlight #next{
+	padding: 1px 13px;
+}
+
+/* Calendar */
+.calendar li { padding-left: 0px; }
+.calendar .month { position: absolute; top: 9px; left: 13px; }
+.calendar .month a, #main #scheduledTrainings .month a { top: 0; left: -1px; }
+.calendar .daynr { position: absolute; top: 24px; left: 12px; }
+.calendar .daynr a, #main #scheduledTrainings .daynr a { top: 0; left: 0; }
+#main #scheduledTrainings .month { top:5px; left:13px }
+#main #scheduledTrainings .daynr { top:21px; left:12px }
+
+/* Specific */
+#detailnav a {
+	padding: 12px 10px 6px;
+    line-height: 24px;
+}
+
+#footer-feeds li {
+	line-height: 22px;
+}
+
+/* sIFR
+.sIFR-active #search {
+	top: 15px;
+} .sIFR-active #search > li {
+	padding: 0 2px;
+} .sIFR-active #search .domain-link {
+	top: 5px;
+} .sIFR-active #box-community {
+	top: 24px;
+}
+.sIFR-active #main {
+	margin-top: 12px;
+}*/

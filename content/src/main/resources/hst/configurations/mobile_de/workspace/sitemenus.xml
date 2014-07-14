@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="hst:sitemenus" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<sv:property sv:name="jcr:primaryType" sv:type="Name">
+  <sv:value>hst:sitemenus</sv:value>
+</sv:property>
+<sv:node sv:name="mobile">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:sitemenu</sv:value>
+  </sv:property>
+  <sv:node sv:name="Produkte">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemenuitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+      <sv:value>produkte</sv:value>
+    </sv:property>
+    <sv:node sv:name="Beliebt">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>produkte/beliebt</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Letzte">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>produkte/letzte</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Suchen">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>produkte/suchen</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="Veranstaltungen">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemenuitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+      <sv:value>veranstaltungen</sv:value>
+    </sv:property>
+    <sv:node sv:name="Anstehende">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>veranstaltungen/anstehende</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Vergangenheit">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>veranstaltungen/vergangenheit</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Suchen">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>veranstaltungen/suchen</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>
+</sv:node>
