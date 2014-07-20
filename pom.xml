@@ -32,11 +32,12 @@
 
   <inceptionYear>2010</inceptionYear>
 
-  <scm>
-    <connection>scm:svn:http://svn.onehippo.org/repos/hippo/hippo-demos/hippo-go-green/trunk</connection>
-    <developerConnection>scm:svn:https://svn.onehippo.org/repos/hippo/hippo-demos/hippo-go-green/trunk</developerConnection>
-    <url>http://svn.onehippo.org/viewvc/hippo-demos/hippo-go-green/trunk</url>
-  </scm>
+	<scm>
+		<connection>scm:git:git@github.com:qalingo/qalingo-hippocms.git</connection>
+		<developerConnection>scm:git:git@github.com:qalingo/qalingo-hippocms.git</developerConnection>
+		<url>scm:git:git@github.com:qalingo/qalingo-hippocms.git</url>
+		<tag>HEAD</tag>
+	</scm>
 
   <properties>
     <!-- use root project name for all project modules NOTICE files, should be the same as in the root NOTICE file -->
@@ -71,6 +72,15 @@
       </releases>
     </repository>
   </repositories>
+  
+<dependencies>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.18</version>
+      <scope>provided</scope>
+    </dependency>
+</dependencies>
 
   <dependencyManagement>
     <dependencies>
@@ -204,7 +214,7 @@
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
-
+	  
     </dependencies>
 
   </dependencyManagement>
@@ -290,6 +300,12 @@
             <configuration>
               <configuration>
                 <properties>
+					<cargo.servlet.port>9080</cargo.servlet.port>
+					<cargo.tomcat.ajp.port>9009</cargo.tomcat.ajp.port>
+					<cargo.rmi.port>9099</cargo.rmi.port>
+					<cargo.jvmargs>
+						<![CDATA[-Xdebug -Xrunjdwp:transport=dt_socket,address=9000,server=y,suspend=n -noverify ${javaagent}]]>
+					</cargo.jvmargs>
                   <catalina.servlet.uriencoding>UTF-8</catalina.servlet.uriencoding>
                 </properties>
                 <configfiles>
@@ -301,11 +317,19 @@
                 </configfiles>
               </configuration>
               <container>
+			<dependencies>
+				<dependency>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+					<classpath>extra</classpath>
+				</dependency>
+			</dependencies>
                 <systemProperties>
                   <!--
                     set project.basedir property to enable automatic export
                     <project.basedir>${project.basedir}</project.basedir>
                   -->
+					<repo.config>file:${project.basedir}/conf/repository.xml</repo.config>
                   <log4j.configuration>file:${project.basedir}/conf/log4j-dev.xml</log4j.configuration>
                 </systemProperties>
               </container>
