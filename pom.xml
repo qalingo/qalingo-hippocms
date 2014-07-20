@@ -433,4 +433,18 @@
 
   </profiles>
 
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Hoteia Releases</name>
+			<url>http://nexus.hoteia.com/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Hoteia Snapshots</name>
+			<url>http://nexus.hoteia.com/content/repositories/snapshots</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+	
 </project>

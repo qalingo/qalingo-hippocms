@@ -29,21 +29,7 @@
   <properties>
     <sonar.l10n.locales>en_US,nl_NL,fr_FR</sonar.l10n.locales>
   </properties>
-
-    <repositories>
-   <repository>
-      <id>hippo</id>
-      <name>Hippo Maven 2</name>
-      <url>http://nexus.hoteia.com</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-    </repository>
-  </repositories>
-    
+   
   <dependencies>
 
     <dependency>
