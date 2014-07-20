@@ -207,8 +207,37 @@
 
   <build>
     <defaultGoal>package</defaultGoal>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.0</version>
+			<configuration>
+				<server>${deploy.server.id}</server>
+				<url>http://${deploy.server.ip}:${deploy.webapp.port}/manager/text</url>
+				<path>${deploy.webapp.path}</path>
+				<update>true</update>
+			</configuration>
+		</plugin>
+	</plugins>
     <pluginManagement>
       <plugins>
+		<plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.0</version>
+			<configuration>
+				<update>true</update>
+			</configuration>
+			<dependencies>
+				<dependency>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+					<version>5.1.9</version>
+				</dependency>
+			</dependencies>
+		</plugin>
+
         <!-- redefine again default Hippo LICENSE and NOTICE file handling configuration like as defined
              in root cms7-project pom but is 'nullified' again in parent cms7-release pom. -->
         <plugin>

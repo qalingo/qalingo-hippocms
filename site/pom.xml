@@ -28,6 +28,11 @@
 
   <properties>
     <sonar.l10n.locales>en_US,nl_NL,fr_FR</sonar.l10n.locales>
+	
+	<deploy.server.id>tomcatQalingo</deploy.server.id>
+	<deploy.server.ip>localhost</deploy.server.ip>
+	<deploy.webapp.port>24080</deploy.webapp.port>
+	<deploy.webapp.path>/site</deploy.webapp.path>
   </properties>
    
   <dependencies>

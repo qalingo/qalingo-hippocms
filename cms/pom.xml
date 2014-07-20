@@ -27,6 +27,13 @@
   <artifactId>hippo-qalingo-cms</artifactId>
   <packaging>war</packaging>
 
+  <properties>
+	<deploy.server.id>tomcatQalingo</deploy.server.id>
+	<deploy.server.ip>localhost</deploy.server.ip>
+	<deploy.webapp.port>24080</deploy.webapp.port>
+	<deploy.webapp.path>/cms</deploy.webapp.path>
+  </properties>
+  
   <dependencies>
 
     <dependency>
