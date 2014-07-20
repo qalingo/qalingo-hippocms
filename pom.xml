@@ -58,20 +58,6 @@
     <yui.sources.version>1.01.11</yui.sources.version>
     <sonar.l10n.locales>nl,fr,it,de</sonar.l10n.locales>
   </properties>
-
-  <repositories>
-   <repository>
-      <id>hippo</id>
-      <name>Hippo Maven 2</name>
-      <url>http://maven.onehippo.com/maven2/</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-    </repository>
-  </repositories>
   
 <dependencies>
     <dependency>
